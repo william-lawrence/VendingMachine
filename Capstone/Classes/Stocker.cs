@@ -56,14 +56,14 @@ namespace Capstone.Classes
                 inventory[vm.Slot].Add(vm);
             }
 
-		private static VendingMachineItem GetVendingMachineItemFromLine(string line)
+		private  static VendingMachineItem GetVendingMachineItemFromLine(string line)
 		{
 			string[] fields = line.Split('|');
 
-			switch (fields[3])
+			if (fields[3] == "Gum")
 			{
-				case: "Gum";
-					Gum = new Gum(fields[0],fields[1],fields[2],fields[3])
+						string name = fields[1].t;
+						 Gum name = new Gum(fields[0], fields[1], decimal.Parse(fields[2]), fields[3]);
 
 			}
 			VendingMachineItem vendingMachineItem = new Gum();
