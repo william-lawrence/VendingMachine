@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Capstone.Classes
 {
-    class Gum : VendingMachingItem
+    class Gum : VendingMachineItem
     {
-        public Gum() : Base()
+        public Gum() : base()
 
         public override string MakeConsumptionSound()
         {

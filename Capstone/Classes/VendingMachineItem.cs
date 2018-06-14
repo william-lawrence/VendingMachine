@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Capstone.Classes
 {
-    public abstract class VendingMachingItem
+    public abstract class VendingMachineItem
     {
         /// <summary>
         /// Slot where the item is stored
@@ -34,7 +34,7 @@ namespace Capstone.Classes
         public int Quantity { get; private set; }
 
 
-        public VendingMachingItem(string slotLocation, string productName, decimal price, ItemType itemType )
+        public VendingMachineItem(string slotLocation, string productName, decimal price, ItemType itemType )
         {
             this.SlotLocation = slotLocation;
             this.ProductName = productName;

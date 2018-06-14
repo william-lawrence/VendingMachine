@@ -45,8 +45,7 @@
   <ItemGroup>
     <Compile Include="Classes\Gum.cs" />
     <Compile Include="Classes\ItemType.cs" />
-    <Compile Include="Classes\Stocker.cs" />
-    <Compile Include="Classes\VendingMachingItem.cs" />
+    <Compile Include="Classes\VendingMachineItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
