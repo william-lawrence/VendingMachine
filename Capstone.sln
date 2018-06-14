@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capstone", "Capstone\Capsto
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capstone.Tests", "Capstone.Tests\Capstone.Tests.csproj", "{145272C3-B933-49D0-9C87-DE5AA1337087}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLI.ConsoleApp", "..\lectures\cli-menus\CLI.Console\CLI.ConsoleApp.csproj", "{915C225C-2FAC-47EA-A496-DB929E6422F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{145272C3-B933-49D0-9C87-DE5AA1337087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{145272C3-B933-49D0-9C87-DE5AA1337087}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{145272C3-B933-49D0-9C87-DE5AA1337087}.Release|Any CPU.Build.0 = Release|Any CPU
+		{915C225C-2FAC-47EA-A496-DB929E6422F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{915C225C-2FAC-47EA-A496-DB929E6422F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{915C225C-2FAC-47EA-A496-DB929E6422F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{915C225C-2FAC-47EA-A496-DB929E6422F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

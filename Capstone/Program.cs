@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CLI.ConsoleApp.CLIs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,8 @@ namespace Capstone
     {
         static void Main(string[] args)
         {
+            MainMenuCLI mainmenu = new MainMenuCLI();
+            mainmenu.Display();
         }
     }
 }

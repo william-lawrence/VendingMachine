@@ -62,6 +62,12 @@
   <ItemGroup>
     <Folder Include="bin\Debug\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\lectures\cli-menus\CLI.Console\CLI.ConsoleApp.csproj">
+      <Project>{915c225c-2fac-47ea-a496-db929e6422f2}</Project>
+      <Name>CLI.ConsoleApp</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
