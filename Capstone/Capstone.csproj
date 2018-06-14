@@ -51,6 +51,7 @@
     <Compile Include="Classes\MainMenu.cs" />
     <Compile Include="Classes\PaymentMenu.cs" />
     <Compile Include="Classes\PurchaseMenu.cs" />
+    <Compile Include="Classes\SelectProductMenu.cs" />
     <Compile Include="Classes\Stocker.cs" />
     <Compile Include="Classes\VendingMachine.cs" />
     <Compile Include="Classes\VendingMachineItem.cs" />
@@ -62,6 +63,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="VendingMachine.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Debug\" />

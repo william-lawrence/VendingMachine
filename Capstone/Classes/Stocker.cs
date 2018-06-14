@@ -14,7 +14,7 @@ namespace Capstone.Classes
         public Stocker()
         {
 			
-            string path = Path.Combine(Environment.CurrentDirectory, "VendingMaching.csv");
+            string path = Path.Combine(Environment.CurrentDirectory, "VendingMachine.csv");
             try
             {
 				this.Inventory = new Dictionary<string, VendingMachineItem>();
