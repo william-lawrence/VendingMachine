@@ -8,7 +8,7 @@ namespace Capstone.Classes
 {
 	public class VendingMachine
 	{
-		public Dictionary<string,VendingMachineItem> Stock { get; private set; }
+		public Dictionary<string, VendingMachineItem> Stock { get; private set; }
 		public decimal Balance { get; private set; }
 		public List<VendingMachineItem> Cart { get; private set; }
 		public decimal TotalPrice { get; set; }
@@ -43,5 +43,33 @@ namespace Capstone.Classes
 			this.Balance += 10.00M;
 		}
 
+		public void MakeChange()
+		{
+			decimal changeBal = (this.Balance - TotalPrice);
+			int quarters =0;			
+			int dimes = 0;		
+			int nickels = 0;
+			while (changeBal > 0)
+			{
+				if (changeBal > 25)
+				{
+					quarters++;
+					changeBal -= 25;
+				}
+				else if (changeBal >10)
+				{
+					dimes++;
+					changeBal -= 10;
+				}
+				else if (changeBal > 5)
+				{
+					nickels++;
+					changeBal -= 5;
+				}
+			}
+	
+			Balance = 0.00M;
+
+		}
 	}
 }
