@@ -47,6 +47,7 @@
     <Compile Include="Classes\Chip.cs" />
     <Compile Include="Classes\Drink.cs" />
     <Compile Include="Classes\Gum.cs" />
+    <Compile Include="Classes\ItemDisplay.cs" />
     <Compile Include="Classes\ItemType.cs" />
     <Compile Include="Classes\MainMenu.cs" />
     <Compile Include="Classes\PaymentMenu.cs" />

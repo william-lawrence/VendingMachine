@@ -60,6 +60,11 @@ namespace Capstone.Classes
             }
         }
 
+		public void RemoveItem()
+		{
+			this.Quantity--;
+		}
+
 
         /// <summary>
         /// The sound made when the product is consumed.
