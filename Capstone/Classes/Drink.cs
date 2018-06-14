@@ -8,7 +8,7 @@ namespace Capstone.Classes
 {
     class Drink : VendingMachineItem
     {
-        public Drink(string slotLocation, string productName, decimal price, ItemType itemType)
+        public Drink(string slotLocation, string productName, decimal price, string itemType)
             : base(slotLocation, productName, price, itemType)
         { }
 

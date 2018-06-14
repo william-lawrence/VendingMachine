@@ -8,7 +8,7 @@ namespace Capstone.Classes
 {
     class Chip : VendingMachineItem
     {
-        public Chip(string slotLocation, string productName, decimal price, ItemType itemType)
+        public Chip(string slotLocation, string productName, decimal price, string itemType)
             : base(slotLocation, productName, price, itemType)
         { }
 
