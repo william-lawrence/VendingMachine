@@ -9,20 +9,22 @@ namespace Capstone.Classes
     /// </summary>
     public class Stocker
     {
-        public Dictionary<string, VendingMachineItem> inventory = new Dictionary<string, VendingMachineItem>();
+		public Dictionary<string, VendingMachineItem> Inventory { get; private set; }
 
         public Stocker()
         {
+			
             string path = Path.Combine(Environment.CurrentDirectory, "VendingMaching.csv");
             try
             {
+				this.Inventory = new Dictionary<string, VendingMachineItem>();
 
                 using (StreamReader sr = new StreamReader(path))
                 {
                     while (!sr.EndOfStream)
                     {
                         string line = sr.ReadLine();
-                        AddNewItemToVendingMachine(line, inventory);
+                        AddNewItemToVendingMachine(line, Inventory);
 
                     }
                 }

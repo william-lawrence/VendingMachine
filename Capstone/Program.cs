@@ -1,4 +1,4 @@
-﻿using CLI.ConsoleApp.CLIs;
+﻿using Capstone.Classes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +11,9 @@ namespace Capstone
     {
         static void Main(string[] args)
         {
-            MainMenuCLI mainmenu = new MainMenuCLI();
+			VendingMachine vm = new VendingMachine();
+
+            MainMenu mainmenu = new MainMenu(vm);
             mainmenu.Display();
         }
     }
