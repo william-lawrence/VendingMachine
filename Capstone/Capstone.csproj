@@ -44,7 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Candy.cs" />
+<<<<<<< HEAD
     <Compile Include="Classes\Chips.cs" />
+=======
+    <Compile Include="Classes\Chip.cs" />
+>>>>>>> dfb5e877d08da0f1783b0791cc856d2f6c8e192b
     <Compile Include="Classes\Drink.cs" />
     <Compile Include="Classes\Gum.cs" />
     <Compile Include="Classes\ItemType.cs" />

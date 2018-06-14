@@ -12,7 +12,7 @@ namespace Capstone.Classes
     public enum ItemType
     {
         Candy,
-        Chips,
+        Chip,
         Drink,  
         Gum
     }
