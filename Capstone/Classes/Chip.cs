@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Capstone.Classes
 {
-    class Chips : VendingMachineItem
+    class Chip : VendingMachineItem
     {
-        public Chips(string slotLocation, string productName, decimal price, ItemType itemType)
+        public Chip(string slotLocation, string productName, decimal price, ItemType itemType)
             : base(slotLocation, productName, price, itemType)
         { }
 

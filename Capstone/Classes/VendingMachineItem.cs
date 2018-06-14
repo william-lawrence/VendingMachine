@@ -34,13 +34,30 @@ namespace Capstone.Classes
         public int Quantity { get; private set; }
 
 
-        public VendingMachineItem(string slotLocation, string productName, decimal price, ItemType itemType)
+        public VendingMachineItem(string slotLocation, string productName, decimal price, string itemType)
         {
             this.SlotLocation = slotLocation;
             this.ProductName = productName;
             this.Price = price;
-            this.ItemType = itemType;
+            
             this.Quantity = 5;
+
+            if (itemType.ToLower() == "gum")
+            {
+                this.ItemType = ItemType.Gum;
+            }
+            else if (itemType.ToLower() == "chips")
+            {
+                this.ItemType = ItemType.Chip;
+            }
+            else if (itemType.ToLower() == "drink")
+            {
+                this.ItemType = ItemType.Chip;
+            }
+            else if (itemType.ToLower() == "candy")
+            {
+                this.ItemType = ItemType.Candy;
+            }
         }
 
 
