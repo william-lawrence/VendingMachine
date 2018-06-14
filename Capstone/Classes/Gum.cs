@@ -8,7 +8,9 @@ namespace Capstone.Classes
 {
     class Gum : VendingMachineItem
     {
-        public Gum() : base()
+        public Gum(string slotLocation, string productName, decimal price, ItemType itemType) 
+            : base(slotLocation, productName, price, itemType)
+        { }
 
         public override string MakeConsumptionSound()
         {
