@@ -34,7 +34,7 @@ namespace Capstone.Classes
         public int Quantity { get; private set; }
 
 
-        public VendingMachineItem(string slotLocation, string productName, decimal price, ItemType itemType )
+        public VendingMachineItem(string slotLocation, string productName, decimal price, ItemType itemType)
         {
             this.SlotLocation = slotLocation;
             this.ProductName = productName;
