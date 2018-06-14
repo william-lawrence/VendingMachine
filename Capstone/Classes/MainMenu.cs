@@ -33,18 +33,15 @@ namespace Capstone.Classes
 
 				if (input == "1")
 				{
-					Console.WriteLine("Available Items: ");
-					foreach (var item in Vm.Stock)
-					{
-
-					}
+                    ItemDisplay items = new ItemDisplay(this.Vm);
+                    items.Display();
 				}
 				else if (input == "2")
 				{
 					PurchaseMenu purchase = new PurchaseMenu(this.Vm);
 					purchase.Display();
 				}
-				else if (input == "Q")
+				else if (input == "Q" || input == "q")
 				{
 					Console.WriteLine("Quitting");
 					break;
