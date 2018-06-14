@@ -4,6 +4,9 @@ using System.IO;
 
 namespace Capstone.Classes
 {
+    /// <summary>
+    /// Class that adds items to the vending machine. 
+    /// </summary>
     public class Stocker
     {
         public Dictionary<string, VendingMachineItem> inventory = new Dictionary<string, VendingMachineItem>();
