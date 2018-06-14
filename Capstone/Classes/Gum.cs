@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Capstone.Classes
 {
-    class Class1
+    class Gum : VendingMachingItem
     {
+        public Gum() : Base()
+
+        public override string MakeConsumptionSound()
+        {
+            return "Chew Chew, Yum";
+        }
     }
 }
