@@ -8,7 +8,7 @@ namespace Capstone.Classes
 	{
 		public Dictionary<string, List<VendingMachineItem>> inventory = new Dictionary<string, List<VendingMachineItem>>();
 
-		public Stocker(Dictionary<string, List<VendingMachingItem>>)
+		public Stocker(Dictionary<string, List<VendingMachineItem>>)
 		{
 			string path = Path.Combine(Environment.CurrentDirectory, "VendingMaching.csv");
 			try
@@ -42,11 +42,23 @@ namespace Capstone.Classes
 			else
 			{
 				inventory[vm.Slot] = new List<VendingMachineItem>();
-				inventory[vm.Slot].Add(vm);
+				inventory[vm.slotLocation].Add(vm);
 			}
 
 		}
 
+		private static VendingMachineItem GetVendingMachineItemFromLine(string line)
+		{
+			string[] fields = line.Split('|');
+
+			switch (fields[3])
+			{
+				case: "Gum";
+					Gum = new Gum(fields[0],fields[1],fields[2],fields[3])
+
+			}
+			VendingMachineItem vendingMachineItem = new Gum();
+		}
 
 
 
