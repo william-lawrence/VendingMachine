@@ -40,6 +40,7 @@ namespace Capstone.Classes
             this.ProductName = productName;
             this.Price = price;
             this.ItemType = itemType;
+            this.Quantity = 5;
         }
 
 
