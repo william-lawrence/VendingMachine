@@ -43,9 +43,12 @@ namespace Capstone.Classes
 			this.Balance += 10.00M;
 		}
 
+		/// <summary>
+		/// Converts the difference after the sale and delivers back the change in quarters, dimes, and nickels
+		/// </summary>
 		public void MakeChange()
 		{
-			decimal changeBal = (this.Balance - TotalPrice);
+			decimal changeBal = (this.Balance - TotalPrice)*100;
 			int quarters =0;			
 			int dimes = 0;		
 			int nickels = 0;
@@ -67,9 +70,9 @@ namespace Capstone.Classes
 					changeBal -= 5;
 				}
 			}
-	
+			
 			Balance = 0.00M;
-
+			Console.WriteLine($"Please accept your change: Quarters:{quarters}, Dimes:{dimes}, Nickels:{nickels}");
 		}
 	}
 }
