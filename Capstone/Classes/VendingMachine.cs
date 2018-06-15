@@ -65,9 +65,6 @@ namespace Capstone.Classes
 		/// </summary>
 		public void MakeChange()
 		{
-
-
-
 			decimal changeBal = (this.Balance) * 100;
 			Balance = 0.00M;
 
