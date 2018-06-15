@@ -21,43 +21,54 @@ namespace Capstone.Classes
 			PrintHeader();
 
 			while (true)
-			{
-				Console.Clear();
-				Console.WriteLine();
-				Console.WriteLine("Main Menu");
-				Console.WriteLine("1] >> Display Vending Machine Items");
-				Console.WriteLine("2] >> Purchase");
-				Console.WriteLine("Q] >> Quit");
-				Console.WriteLine($"Current Money Provided: {Vm.Balance.ToString("C2")}");
+            {
+                DisplayMenuOptions();
 
-				Console.Write("What option do you want to select? ");
-				string input = Console.ReadLine().ToUpper();
+                Console.Write("What option do you want to select? ");
+                string input = Console.ReadLine().ToUpper();
 
-				if (input == "1")
-				{
+                // Displays all items and their price to the user.
+                if (input == "1")
+                {
                     ItemDisplay items = new ItemDisplay(this.Vm);
                     items.Display();
-				}
-				else if (input == "2")
-				{
-					PurchaseMenu purchase = new PurchaseMenu(this.Vm);
-					purchase.Display();
-				}
-				else if (input == "Q" || input == "q")
-				{
-					Console.WriteLine("Quitting");
-					break;
-				}
-				else
-				{
-					Console.WriteLine("Please try again");
-				}
-			}
-		}
+                }
+                // Takes the user to the purchase menu.
+                else if (input == "2")
+                {
+                    PurchaseMenu purchase = new PurchaseMenu(this.Vm);
+                    purchase.Display();
+                }
+                // Exits the program.
+                else if (input == "Q" || input == "q")
+                {
+                    Console.WriteLine("Quitting");
+                    break;
+                }
+                // Asks the user to try again if they entered an invalid input.
+                else
+                {
+                    Console.WriteLine("Please try again");
+                }
+            }
+        }
 
-		private void PrintHeader()
+        /// <summary>
+        /// Displays the menu options.
+        /// </summary>
+        private void DisplayMenuOptions()
+        {
+            Console.Clear();
+            Console.WriteLine();
+            Console.WriteLine("Main Menu");
+            Console.WriteLine("1] >> Display Vending Machine Items");
+            Console.WriteLine("2] >> Purchase");
+            Console.WriteLine("Q] >> Quit");
+            Console.WriteLine($"Current Money Provided: {Vm.Balance.ToString("C2")}");
+        }
+
+        private void PrintHeader()
 		{
-
 			Console.WriteLine("WELCOME!!!!");
 		}
 	}

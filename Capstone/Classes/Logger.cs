@@ -15,7 +15,10 @@ namespace Capstone.Classes
 			this.Vm = vm;
 		}
 
-
+        /// <summary>
+        /// Records the amount of money fed into the machine and logs it in Log.txt.
+        /// </summary>
+        /// <param name="money">Amount of money fed into the machine.</param>
 		public void LogFeedMoney(decimal money)
 		{
 			string outputPath = Path.Combine(Environment.CurrentDirectory, "Log.txt");
@@ -33,6 +36,10 @@ namespace Capstone.Classes
 			}
 		}
 
+        /// <summary>
+        /// Records an item purchased from the machine and logs it in Log.txt.
+        /// </summary>
+        /// <param name="item"></param>
 		public void LogVendItem(VendingMachineItem item)
 		{
 			string outputPath = Path.Combine(Environment.CurrentDirectory, "Log.txt");
@@ -49,6 +56,11 @@ namespace Capstone.Classes
 			}
 		}
 
+        /// <summary>
+        /// Records the amount of change given to the user and logs it in Log.txt.
+        /// </summary>
+        /// <param name="changeGiven">Amount of change given to the user.</param>
+        /// <param name="finalBalance">Balance after all the change has been given back.</param>
 		public void LogMakeChange(decimal changeGiven, decimal finalBalance)
 		{
 			string outputPath = Path.Combine(Environment.CurrentDirectory, "Log.txt");
