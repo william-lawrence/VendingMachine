@@ -11,7 +11,7 @@ namespace Capstone.Classes
 		public Dictionary<string, VendingMachineItem> Stock { get; private set; }
 		public decimal Balance { get; private set; }
 		public List<VendingMachineItem> Cart { get; private set; }
-		public decimal TotalPrice { get; set; }
+
 
 
 		private Stocker stocker = new Stocker();
@@ -20,7 +20,7 @@ namespace Capstone.Classes
 			Stock = new Dictionary<string, VendingMachineItem>(stocker.Inventory);
 			Cart = new List<VendingMachineItem>();
 			Balance = 0;
-			TotalPrice = 0;
+			
 		}
 
 		public decimal FindTotalPrice()

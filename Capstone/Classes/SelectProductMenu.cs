@@ -49,7 +49,6 @@ namespace Capstone.Classes
                         {
 
                             Vm.Cart.Add(item);
-                            Vm.TotalPrice += item.Price;
                             Vm.SubtractFromBalance(item.Price);
                             item.RemoveItem();
                             logger.LogVendItem(item);
