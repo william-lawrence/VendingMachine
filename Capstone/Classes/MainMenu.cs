@@ -22,14 +22,16 @@ namespace Capstone.Classes
 
 			while (true)
 			{
+				Console.Clear();
 				Console.WriteLine();
 				Console.WriteLine("Main Menu");
 				Console.WriteLine("1] >> Display Vending Machine Items");
 				Console.WriteLine("2] >> Purchase");
 				Console.WriteLine("Q] >> Quit");
+				Console.WriteLine($"Current Money Provided: {Vm.Balance.ToString("C2")}");
 
 				Console.Write("What option do you want to select? ");
-				string input = Console.ReadLine();
+				string input = Console.ReadLine().ToUpper();
 
 				if (input == "1")
 				{

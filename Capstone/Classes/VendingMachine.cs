@@ -23,6 +23,23 @@ namespace Capstone.Classes
 			TotalPrice = 0;
 		}
 
+		public decimal FindTotalPrice()
+		{
+			decimal totalPrice = 0;
+
+			foreach (var item in this.Cart)
+			{
+				totalPrice += item.Price;
+			}
+
+			return totalPrice;
+		}
+
+		public void SubtractFromBalance(Decimal money)
+		{
+			this.Balance -= money;
+		}
+
 		public void Add1()
 		{
 			this.Balance += 1.00M;
@@ -48,30 +65,39 @@ namespace Capstone.Classes
 		/// </summary>
 		public void MakeChange()
 		{
-			decimal changeBal = (this.Balance - TotalPrice)*100;
-			int quarters =0;			
-			int dimes = 0;		
+
+
+
+			decimal changeBal = (this.Balance) * 100;
+			Balance = 0.00M;
+
+			Logger logger = new Logger(this);
+			logger.LogMakeChange(changeBal, this.Balance);
+
+
+			int quarters = 0;
+			int dimes = 0;
 			int nickels = 0;
+
 			while (changeBal > 0)
 			{
-				if (changeBal > 25)
+				if (changeBal >= 25)
 				{
 					quarters++;
 					changeBal -= 25;
 				}
-				else if (changeBal >10)
+				else if (changeBal >= 10)
 				{
 					dimes++;
 					changeBal -= 10;
 				}
-				else if (changeBal > 5)
+				else if (changeBal >= 5)
 				{
 					nickels++;
 					changeBal -= 5;
 				}
 			}
-			
-			Balance = 0.00M;
+
 			Console.WriteLine($"Please accept your change: Quarters:{quarters}, Dimes:{dimes}, Nickels:{nickels}");
 		}
 	}

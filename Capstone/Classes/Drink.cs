@@ -14,7 +14,7 @@ namespace Capstone.Classes
 
         public override string MakeConsumptionSound()
         {
-            return "Chew Chew, Yum";
+            return "Glug Glug, Yum";
         }
     }
 }

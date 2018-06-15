@@ -25,13 +25,16 @@ namespace Capstone.Classes
                 Console.WriteLine("Available Items: ");
                 foreach (var item in Vm.Stock.Values)
                 {
-                    Console.WriteLine($"  {item.SlotLocation}  {item.ProductName}  {item.Price}");
+					if (item.Quantity > 0)
+					{
+						Console.WriteLine($"  {item.SlotLocation}  {item.ProductName}  {item.Price}");
+					}
                 }
 
 
                 Console.Write("Enter Q to Quit: ");
                 
-                string input = Console.ReadLine();
+                string input = Console.ReadLine().ToUpper();
 
                 if (input == "Q")
                 {

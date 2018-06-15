@@ -14,38 +14,44 @@ namespace Capstone.Classes
             this.Vm = vm;
         }
 
+
         public void Display()
         {
             while (true)
             {
                 Console.Clear();
                 Console.WriteLine();
-                Console.WriteLine($"Current Balance: {Vm.Balance}");
+                Console.WriteLine($"Current Balance: {Vm.Balance.ToString("C2")}");
                 Console.WriteLine("Pick an Amount:");
                 Console.WriteLine("1] >> $ 1.00");
                 Console.WriteLine("2] >> $ 2.00");
                 Console.WriteLine("3] >> $ 5.00");
                 Console.WriteLine("4] >> $ 10.00");
-                Console.WriteLine("Q] >> Return to Main Menu");
+                Console.WriteLine("Q] >> Return to Purchase Menu");
 
                 Console.Write("What option do you want to select? ");
-                string input = Console.ReadLine();
+                string input = Console.ReadLine().ToUpper();
+				Logger logger = new Logger(Vm);
 
-                if (input == "1")
+				if (input == "1")
                 {
                     Vm.Add1();
+					logger.LogFeedMoney(1.00M);
                 }
                 else if (input == "2")
                 {
                     Vm.Add2();
+					logger.LogFeedMoney(2.00M);
                 }
                 else if (input == "3")
                 {
                     Vm.Add5();
+					logger.LogFeedMoney(5.00M);
                 }
                 else if (input == "4")
                 {
                     Vm.Add10();
+					logger.LogFeedMoney(10.00M);
                 }
                 else if (input == "Q")
                 {

@@ -19,28 +19,60 @@ namespace Capstone.Classes
 		{
 			while (true)
 			{
-
+				Console.Clear();
 				Console.WriteLine();
 				Console.WriteLine("Available Products: ");
 
 				foreach (var item in Vm.Stock.Values)
 				{
-					Console.WriteLine($"  {item.SlotLocation}  {item.ProductName}  {item.Price}");
+					if (item.Quantity > 0)
+					{
+						Console.WriteLine($"  {item.SlotLocation}  {item.ProductName}  {item.Price}");
+					}
+
 				}
 
+				Console.WriteLine($"Total Money Input: {Vm.Balance.ToString("C2")}");
+				Console.WriteLine($"Current total in cart: {Vm.FindTotalPrice().ToString("C2")}");
+
 				List<VendingMachineItem> items = new List<VendingMachineItem>(Vm.Stock.Values);
+				Logger logger = new Logger(Vm);
 
-				Console.Write("What option do you want to select? ");
+				Console.Write("What option do you want to select? (Press Q to quit)");
 				string input = Console.ReadLine().ToUpper();
-
-				foreach (var item in items)
+				if (input != "Q")
 				{
-					if (item.SlotLocation == input && item.Quantity > 0)
+
+
+					foreach (var item in items)
 					{
-						Vm.Cart.Add(item);
-						Vm.TotalPrice += item.Price;
-						item.RemoveItem();
+						if (item.Price <= Vm.Balance && item.SlotLocation == input && item.Quantity > 0)
+						{
+
+							Vm.Cart.Add(item);
+							Vm.TotalPrice += item.Price;
+							Vm.SubtractFromBalance(item.Price);
+							item.RemoveItem();
+							logger.LogVendItem(item);
+							break;
+						}
+						else if (item.Price > Vm.Balance && item.SlotLocation == input && item.Quantity > 0)
+						{
+							Console.WriteLine($"You do not have enough money to purchase {item.ProductName}");
+							Console.Beep(440, 500);
+							System.Threading.Thread.Sleep(2000);
+							break;
+						}
 					}
+
+				}
+				else if (input == "Q")
+				{
+					break;
+				}
+				else
+				{
+					Console.WriteLine("Please Try Again");
 				}
 
 			}

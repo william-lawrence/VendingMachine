@@ -19,6 +19,7 @@ namespace Capstone.Classes
 		{
 			while (true)
 			{
+				Console.Clear();
 				Console.WriteLine();
 				Console.WriteLine("Welcome to the Purchase Menu:");
 				Console.WriteLine("1] >> Feed Money");
@@ -27,7 +28,7 @@ namespace Capstone.Classes
 				Console.WriteLine("Q] >> Return to Main Menu");
 
 				Console.Write("What option do you want to select? ");
-				string input = Console.ReadLine();
+				string input = Console.ReadLine().ToUpper();
 
 				if (input == "1")
 				{
@@ -44,6 +45,8 @@ namespace Capstone.Classes
 				else if (input == "3")
 				{
 					Console.WriteLine("Finish Transaction");
+					FinishTransactionMenu finishTransactionMenu = new FinishTransactionMenu(this.Vm);
+					finishTransactionMenu.Display();
 				}
 				else if (input == "Q")
 				{
