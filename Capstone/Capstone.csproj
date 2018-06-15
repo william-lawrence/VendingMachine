@@ -52,6 +52,7 @@
     <Compile Include="Classes\MainMenu.cs" />
     <Compile Include="Classes\PaymentMenu.cs" />
     <Compile Include="Classes\PurchaseMenu.cs" />
+    <Compile Include="Classes\SelectProductMenu.cs" />
     <Compile Include="Classes\Stocker.cs" />
     <Compile Include="Classes\VendingMachine.cs" />
     <Compile Include="Classes\VendingMachineItem.cs" />
