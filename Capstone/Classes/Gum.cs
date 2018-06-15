@@ -9,7 +9,7 @@ namespace Capstone.Classes
     /// <summary>
     /// Represents a gum item in the vending machine.
     /// </summary>
-    class Gum : VendingMachineItem
+    public class Gum : VendingMachineItem
     {
         public Gum(string slotLocation, string productName, decimal price, string itemType)
             : base(slotLocation, productName, price, itemType)

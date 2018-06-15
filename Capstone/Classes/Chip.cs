@@ -9,7 +9,7 @@ namespace Capstone.Classes
     /// <summary>
     /// Represents a chip item in the vending machine.
     /// </summary>
-    class Chip : VendingMachineItem
+    public class Chip : VendingMachineItem
     {
         public Chip(string slotLocation, string productName, decimal price, string itemType)
             : base(slotLocation, productName, price, itemType)
