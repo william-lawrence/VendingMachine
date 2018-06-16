@@ -9,15 +9,15 @@ namespace Capstone.Classes
     /// </summary>
     public class Stocker
     {
-		public Dictionary<string, VendingMachineItem> Inventory { get; private set; }
+        public Dictionary<string, VendingMachineItem> Inventory { get; private set; }
 
         public Stocker()
         {
-			
+
             string path = Path.Combine(Environment.CurrentDirectory, "VendingMachine.csv");
             try
             {
-				this.Inventory = new Dictionary<string, VendingMachineItem>();
+                this.Inventory = new Dictionary<string, VendingMachineItem>();
 
                 using (StreamReader sr = new StreamReader(path))
                 {
@@ -40,8 +40,8 @@ namespace Capstone.Classes
         /// <summary>
         /// Adds an item to the vending machine
         /// </summary>
-        /// <param name="line"></param>
-        /// <param name="inventory"></param>
+        /// <param name="line">The line of text in the input file.</param>
+        /// <param name="inventory">The inventoy in the vending machine.</param>
         private void AddNewItemToVendingMachine(string line, Dictionary<string, VendingMachineItem> inventory)
         {
             string[] fields = line.Split('|');

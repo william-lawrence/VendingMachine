@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Capstone.Classes
 {
+    /// <summary>
+    /// Menu where the user feeds money to the machine.
+    /// </summary>
     public class PaymentMenu
     {
         public VendingMachine Vm { get; set; }
@@ -14,6 +17,9 @@ namespace Capstone.Classes
             this.Vm = vm;
         }
 
+        /// <summary>
+        /// Displays the menu.
+        /// </summary>
         public void Display()
         {
             while (true)

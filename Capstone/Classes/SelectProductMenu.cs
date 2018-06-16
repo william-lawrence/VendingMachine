@@ -10,18 +10,18 @@ namespace Capstone.Classes
     /// Menu used to select product
     /// </summary>
 	public class SelectProductMenu
-	{
-		public VendingMachine Vm { get; set; }
+    {
+        public VendingMachine Vm { get; set; }
 
-		public SelectProductMenu(VendingMachine vm)
-		{
-			this.Vm = vm;
-		}
+        public SelectProductMenu(VendingMachine vm)
+        {
+            this.Vm = vm;
+        }
 
-		public void Display()
-		{
-			while (true)
-            { 
+        public void Display()
+        {
+            while (true)
+            {
 
                 ShowAvailableItems();
 

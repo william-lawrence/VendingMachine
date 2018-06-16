@@ -39,7 +39,8 @@ namespace Capstone.Classes
             this.SlotLocation = slotLocation;
             this.ProductName = productName;
             this.Price = price;
-            
+
+            // Every item in the machine has an initial quanity 5.
             this.Quantity = 5;
 
             if (itemType.ToLower() == "gum")
@@ -60,10 +61,13 @@ namespace Capstone.Classes
             }
         }
 
+        /// <summary>
+        /// Lowers the quantity of an item in the vending machine. 
+        /// </summary>
 		public void RemoveItem()
-		{
-			this.Quantity--;
-		}
+        {
+            this.Quantity--;
+        }
 
 
         /// <summary>
