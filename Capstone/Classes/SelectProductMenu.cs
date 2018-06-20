@@ -41,7 +41,8 @@ namespace Capstone.Classes
                 // Path where the user has selected a valid item.
                 if (input != "Q")
                 {
-
+                    //bool canPurchaseItem = Vm.Stock.ContainsKey(input) && Vm.Stock[input].Price <= Vm.Balance && Vm.Stock[input].Quantity > 0;
+                    
                     foreach (var item in items)
                     {
                         // Path where the product exists, and the user has enough money to purchase it. 
