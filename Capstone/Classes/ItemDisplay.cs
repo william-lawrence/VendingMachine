@@ -11,7 +11,7 @@ namespace Capstone.Classes
     /// </summary>
     public class ItemDisplay
     {
-        public VendingMachine Vm { get; get; }
+        public VendingMachine Vm { get; }
 
         public ItemDisplay(VendingMachine vm)
         {

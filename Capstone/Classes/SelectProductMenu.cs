@@ -32,7 +32,7 @@ namespace Capstone.Classes
                 // Putting all the individual vending machine items in a list so that their properties can be easily accessed. 
                 List<VendingMachineItem> items = new List<VendingMachineItem>(Vm.Stock.Values);
 
-                // Logger that will track transactions and save them to Log.txt
+                // Logger that will track transactions
                 Logger logger = new Logger(Vm);
 
                 Console.Write("What option do you want to select? (Press Q to quit)");
@@ -45,9 +45,9 @@ namespace Capstone.Classes
                     foreach (var item in items)
                     {
                         // Path where the product exists, and the user has enough money to purchase it. 
-                        if (item.Price <= Vm.Balance && item.SlotLocation == input && item.Quantity > 0)
+                        bool canPurchaseItem = item.Price <= Vm.Balance && item.SlotLocation == input && item.Quantity > 0;
+                        if (canPurchaseItem)
                         {
-
                             Vm.Cart.Add(item);
                             Vm.SubtractFromBalance(item.Price);
                             item.RemoveItem();

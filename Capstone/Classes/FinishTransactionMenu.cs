@@ -34,7 +34,7 @@ namespace Capstone.Classes
                     Console.WriteLine("Thank you for your patronage, have a blessed day!");
 
                     Vm.MakeChange();
-
+                    
                     // Loops through each item in the cart, displays item name and consumption sound.
                     foreach (var item in Vm.Cart)
                     {
