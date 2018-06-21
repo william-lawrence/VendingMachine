@@ -40,7 +40,7 @@ namespace Capstone.Classes
             this.ProductName = productName;
             this.Price = price;
 
-            // Every item in the machine has an initial quanity 5.
+            // Every item in the machine has an initial quantity 5.
             this.Quantity = 5;
 
             if (itemType.ToLower() == "gum")

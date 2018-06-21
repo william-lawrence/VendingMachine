@@ -41,7 +41,7 @@ namespace Capstone.Classes
                 // Path where the user has selected a valid item.
                 if (input != "Q")
                 {
-                    //bool canPurchaseItem = Vm.Stock.ContainsKey(input) && Vm.Stock[input].Price <= Vm.Balance && Vm.Stock[input].Quantity > 0;
+                   
                     
                     foreach (var item in items)
                     {
@@ -49,14 +49,11 @@ namespace Capstone.Classes
                         bool canPurchaseItem = item.Price <= Vm.Balance && item.SlotLocation == input && item.Quantity > 0;
                         if (canPurchaseItem)
                         {
-                            Vm.Cart.Add(item);
-                            Vm.SubtractFromBalance(item.Price);
-                            item.RemoveItem();
-                            logger.LogVendItem(item);
+                            AddToCart(logger, item);
                             break;
                         }
                         // Path where the product exists, but the user does not have enough money to purchase it.
-                        else if (item.Price > Vm.Balance && item.SlotLocation == input && item.Quantity > 0)
+                        else if (!canPurchaseItem)
                         {
                             Console.WriteLine($"You do not have enough money to purchase {item.ProductName}");
                             Console.Beep(440, 500);
@@ -78,6 +75,14 @@ namespace Capstone.Classes
                 }
 
             }
+        }
+
+        private void AddToCart(Logger logger, VendingMachineItem item)
+        {
+            Vm.Cart.Add(item);
+            Vm.SubtractFromBalance(item.Price);
+            item.RemoveItem();
+            logger.LogVendItem(item);
         }
 
         /// <summary>

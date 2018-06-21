@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Capstone.Classes
 {
     /// <summary>
-    /// The main meu of the application.
+    /// The main menu of the application.
     /// </summary>
 	public class MainMenu
     {
