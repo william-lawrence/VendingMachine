@@ -70,7 +70,7 @@ namespace Capstone.Classes
         {
             Console.Clear();
             Console.WriteLine();
-            Console.WriteLine("Welcome to the Purchase Menu:");
+            Console.WriteLine("Are you sure that you want to finish your purchase?: ");
             Console.WriteLine("1] >> Finish Transaction");
             Console.WriteLine("Q] >> Return to Purchase Menu");
             Console.Write("What option do you want to select? ");
