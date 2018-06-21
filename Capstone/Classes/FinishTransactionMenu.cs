@@ -10,20 +10,20 @@ namespace Capstone.Classes
     /// Menu where the user completes the transaction
     /// </summary>
 	public class FinishTransactionMenu
-	{
-		public VendingMachine Vm { get; set; }
+    {
+        public VendingMachine Vm { get; set; }
 
-		public FinishTransactionMenu(VendingMachine vm)
-		{
-			this.Vm = vm;
-		}
+        public FinishTransactionMenu(VendingMachine vm)
+        {
+            this.Vm = vm;
+        }
 
         /// <summary>
         /// Displays the menu.
         /// </summary>
 		public void Display()
-		{
-			while (true)
+        {
+            while (true)
             {
                 DisplayOptions();
                 string input = Console.ReadLine().ToUpper();
@@ -34,7 +34,8 @@ namespace Capstone.Classes
                     Console.WriteLine("Thank you for your patronage, have a blessed day!");
 
                     Vm.MakeChange();
-                    
+                    Console.WriteLine($"Please accept your change: Quarters:{Vm.change.Quarters}, Dimes:{Vm.change.Dimes}, Nickels:{Vm.change.Nickels}");
+
                     // Loops through each item in the cart, displays item name and consumption sound.
                     foreach (var item in Vm.Cart)
                     {
@@ -62,7 +63,7 @@ namespace Capstone.Classes
                 {
                     Console.WriteLine("Returning to previous menu");
                     break;
-                } 
+                }
                 // Path where the user inputs an invalid string.
                 else
                 {

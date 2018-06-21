@@ -23,6 +23,10 @@ namespace Capstone.Classes
         /// </summary>
 		public List<VendingMachineItem> Cart { get; private set; }
 
+        /// <summary>
+        /// Represents the change to be dispensed.
+        /// </summary>
+        public Change change = new Change();
 
         // The stocker fills the vending machine.
         private Stocker stocker = new Stocker();
@@ -57,7 +61,7 @@ namespace Capstone.Classes
         /// <param name="money">The amount of money to remove from the balance.</param>
 		public void SubtractFromBalance(Decimal money)
         {
-            // Making sure that the machine wont accidently add money to the balance.
+            // Making sure that the machine wont accidentally add money to the balance.
             if (money > 0)
             {
                 this.Balance -= money;
@@ -108,30 +112,24 @@ namespace Capstone.Classes
             Logger logger = new Logger(this);
             logger.LogMakeChange(changeBal, this.Balance);
 
-            int quarters = 0;
-            int dimes = 0;
-            int nickels = 0;
-
             while (changeBal > 0)
             {
                 if (changeBal >= 25)
                 {
-                    quarters++;
+                    change.Quarters++;
                     changeBal -= 25;
                 }
                 else if (changeBal >= 10)
                 {
-                    dimes++;
+                    change.Dimes++;
                     changeBal -= 10;
                 }
                 else if (changeBal >= 5)
                 {
-                    nickels++;
+                    change.Nickels++;
                     changeBal -= 5;
                 }
             }
-
-            Console.WriteLine($"Please accept your change: Quarters:{quarters}, Dimes:{dimes}, Nickels:{nickels}");
         }
     }
 }
