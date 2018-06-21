@@ -6,21 +6,25 @@ using System.Threading.Tasks;
 
 namespace Capstone.Classes
 {
+    /// <summary>
+    /// The main meu of the application.
+    /// </summary>
 	public class MainMenu
-	{
-		public VendingMachine Vm { get; set; }
-		public MainMenu(VendingMachine vm)
-		{
-			this.Vm = vm;
-		}
+    {
+        public VendingMachine Vm { get; set; }
+        public MainMenu(VendingMachine vm)
+        {
+            this.Vm = vm;
+        }
 
-
-
+        /// <summary>
+        /// Displays the main menu.
+        /// </summary>
 		public void Display()
-		{
-			PrintHeader();
+        {
+            PrintHeader();
 
-			while (true)
+            while (true)
             {
                 DisplayMenuOptions();
 
@@ -67,11 +71,14 @@ namespace Capstone.Classes
             Console.WriteLine($"Current Money Provided: {Vm.Balance.ToString("C2")}");
         }
 
+        /// <summary>
+        /// Prints header to console.
+        /// </summary>
         private void PrintHeader()
-		{
-			Console.WriteLine("WELCOME!!!!");
-		}
-	}
+        {
+            Console.WriteLine("WELCOME!!!!");
+        }
+    }
 
 
 

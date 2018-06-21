@@ -6,18 +6,24 @@ using System.Threading.Tasks;
 
 namespace Capstone.Classes
 {
+    /// <summary>
+    /// Menu where the user moves through the purchasing process.
+    /// </summary>
 	public class PurchaseMenu
-	{
-		public VendingMachine Vm { get; set; }
+    {
+        public VendingMachine Vm { get; set; }
 
-		public PurchaseMenu(VendingMachine vm)
-		{
-			this.Vm = vm;
-		}
+        public PurchaseMenu(VendingMachine vm)
+        {
+            this.Vm = vm;
+        }
 
+        /// <summary>
+        /// Display the menu.
+        /// </summary>
 		public void Display()
-		{
-			while (true)
+        {
+            while (true)
             {
                 DisplayMenuOptions();
 

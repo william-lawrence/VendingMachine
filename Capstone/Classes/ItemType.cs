@@ -13,7 +13,7 @@ namespace Capstone.Classes
     {
         Candy,
         Chip,
-        Drink,  
+        Drink,
         Gum
     }
 }
