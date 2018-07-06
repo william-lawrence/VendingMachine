@@ -26,7 +26,7 @@ stocks the vending machine via text file. In this case it is the VendingMachine.
         - The current money provided indicates how much money the customer has fed into the machine
     2. Selecting (2) Select Product allows the customer to select a product to purchase.
         - If the product code does not exist, the customer is informed and returned to the Purchase menu.
-        - i. If a product is sold out, the customer is informed and returned to the Purchase menu.
+        - If a product is sold out, the customer is informed and returned to the Purchase menu.
         - If a valid product is selected it is dispensed to the customer.
         - After the product is dispensed, the machine should update its balance accordingly and return the customer to the Purchase menu
     3. Selecting (3) Finish Transaction allows the customer to complete the transaction and receive any remaining change back.
