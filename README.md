@@ -39,14 +39,14 @@ stocks the vending machine via text file. In this case it is the VendingMachine.
             4. All gum items will return “Chew Chew, Yum!”
 -   All purchases must be audited to prevent theft from the vending machine
     - Each purchase should generate a line in a file called Log.txt
-    - b. The audit entry should be in the format: 
-'''
+    - b. The audit entry should be in the format:  
+
 01/01/2016 12:00:00 PM FEED MONEY: $5.00 $5.00  
 01/01/2016 12:00:15 PM FEED MONEY: $5.00 $10.00  
 01/01/2016 12:00:20 PM Crunchie B4 $10.00 $8.50  
 01/01/2016 12:01:25 PM Cowtales B2 $8.50 $7.50  
 01/01/2016 12:01:35 PM GIVE CHANGE: $7.50 $0.00  
-'''
+
 
 - There should be unit tests in place in order to test the program.
 
