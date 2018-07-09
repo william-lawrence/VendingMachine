@@ -1,7 +1,7 @@
 # Vending Machine
 
 ## Introduction
-The vending machine program is mini capstone project that I created a Tech Elevator, the coding bootcamp that I attended. The program 
+The vending machine program is mini capstone project that I created at Tech Elevator, the coding bootcamp that I attended. The program 
 stocks the vending machine via text file. In this case it is the VendingMachine.csv. 
 
 ## Requirements
